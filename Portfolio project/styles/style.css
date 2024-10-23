@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #494d66;
+}
+/*----------------NAVBAR---------------------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #141625;
+  padding: 10px;
+  color: white;
+}
+.navbar-mobile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.navbar-links {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* Just below the navbar */
+  right: 0;  /* Align to the right */
+  background-color: #141625;
+  
+  width: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-out; /* Smooth sliding effect */
+  transform: translateX(100%); /* Start out of view */
+}
+.navbar-links.visible {
+  display: block;
+  transform: translateX(0%); /* Slide into view */
+}
+
+#logo {
+  width: 10rem;
+  height: auto;
+}
+/*-----------------Menu icon------------------*/
+.toggle-button {
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggle-button .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/*---------------NAVBAR DISPLAY------------------*/
+
+.nav-link {
+  position: relative;
+  padding: 5px 0;
+  display: inline-block;
+}
+
+.not-visible {
+  display: none;
+}
+.visible {
+  display: flex;
+
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-item {
+  position: relative;
+  transition: all 200ms linear;
+}
+
+.nav-item:hover .nav-link {
+  color: #8167a9;
+}
+.nav-item.active .nav-link {
+  color: #777;
+}
+
+.nav-item:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: #8167a9;
+  opacity: 0;
+  transition: all 200ms linear;
+}
+.nav-item:hover:after {
+  bottom: 0;
+  opacity: 1;
+}
+
+
+
+/*--------------------Media Query----------------*/
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+}

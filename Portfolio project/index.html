@@ -4,94 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <header>
-    <nav class="navbar">
-      <div class="brand-title">
-        <a href="index.html"
-          ><img width="auto" height="50px" src="./images/Logo2-removebg-preview.png" alt="logo"
-        /></a>
-      </div>
-      <a href="#" class="toggle-button" onclick="myFunction(this)">
-        <span class="bar bar1"></span>
-        <span class="bar bar2"></span>
-        <span class="bar bar3"></span>
-      </a>
-      <div class="navbar-links">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a
-              class="nav-link"
-              data-toggle="dropdown"
-              href="index.html"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >About me</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Projects</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Portfolio</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
   <body>
-    <div class="hero-container">
-      <section class="main-container">
-
-      </section>
-      <section class="description-container">
-
-      </section>
-    </div>
-    <script>
-      function myFunction(x) {
-        x.classList.toggle("change");
-      }
-    </script>
+    <header>
+      <nav class="navbar">
+        <div>
+          <a href="index.html"
+            ><img
+              id="logo"
+              src="./images/Logo2-removebg-preview.png"
+              alt="logo"
+          /></a>
+        </div>
+        <div class="navbar-mobile">
+          <a href="#" class="toggle-button">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+          </a>
+          <div class="navbar-links not-visible">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a
+                  class="nav-link"
+                  data-toggle="dropdown"
+                  href="index.html"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >About me</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="hero-container">
+        <section class="main-container"></section>
+        <section class="description-container"></section>
+      </div>
+    </main>
+    <script src="./src/index.js"></script>
   </body>
 </html>
