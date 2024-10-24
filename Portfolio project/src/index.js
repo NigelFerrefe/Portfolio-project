@@ -1,9 +1,13 @@
-const menuElement = document.querySelector(".toggle-button");
-const navDisplay = document.querySelector(".navbar-links");
+const menuBtnElement = document.querySelector("#menu-btn");
+const menuElement = document.querySelector("#menu");
 
-menuElement.addEventListener("click", () => {
-    menuElement.classList.toggle("change");
-    navDisplay.classList.toggle("visible");
+
+menuBtnElement.addEventListener("click", (event) => {
+
+
+  menuElement.classList.toggle("not-visible");
+  menuElement.classList.toggle("flex");
 });
+
 
 
