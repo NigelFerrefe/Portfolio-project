@@ -2,6 +2,7 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/navbar/Navbar';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path='/portfolio'/>
         <Route path='/about'/>
         <Route path='/contact'/>
+        <Route path='*' element={<ErrorPage/>}/>
       </Routes>
     </>
   )
