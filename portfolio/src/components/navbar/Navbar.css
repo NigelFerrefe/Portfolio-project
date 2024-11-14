@@ -1,0 +1,16 @@
+.navbar-container {
+    background-color: rgb(48, 98, 37);
+    height: 8rem;
+    max-height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.nav-links-container {
+    display: flex;
+    flex-direction: column;
+}
