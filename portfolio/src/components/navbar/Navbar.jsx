@@ -1,9 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
-import burgerIcon from "../../assets/icons8-menú-80.png";
-import cancelIcon from "../../assets/icons8-eliminar-64.png";
-
 function Navbar() {
   const [isMenuHide, setIsMenuHide] = useState(false);
 
