@@ -40,22 +40,22 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-item" to="/projects">
+            <NavLink className="nav-item" to="/projects" onClick={handleCloseMenu}>
               <h1>Projects</h1>
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-item" to="/portfolio">
+            <NavLink className="nav-item" to="/portfolio" onClick={handleCloseMenu}>
               <h1>3D Projects</h1>
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-item" to="/about">
+            <NavLink className="nav-item" to="/about" onClick={handleCloseMenu}>
               <h1>About</h1>
             </NavLink>
           </li>
           <li>
-            <NavLink className="nav-item" to="/contact">
+            <NavLink className="nav-item" to="/contact" onClick={handleCloseMenu}>
               <h1>Contact</h1>
             </NavLink>
           </li>
