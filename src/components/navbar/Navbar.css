@@ -58,6 +58,9 @@
 .navbar-nav.menu-visible {
   transform: translateX(0);
   list-style-type: none;
+  height: 100vh;
+  overflow: hidden; /* Prevent internal scrolling */
+  z-index: 999;
 }
 
 
@@ -67,8 +70,8 @@
   justify-content: center; /* Center vertically */
   align-items: center;    /* Center horizontally */
   text-align: center;
-  height: 80%;
-  gap: 5rem;
+  height: 100%;
+  gap: 4rem;
   
 }
 
