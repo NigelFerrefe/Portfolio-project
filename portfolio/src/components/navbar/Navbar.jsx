@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { useState, useEffect } from "react";
-import burguerIcon from "../../assets/icons8-menú-80.png";
+import { useState } from "react";
+import burgerIcon from "../../assets/icons8-menú-80.png";
 import cancelIcon from "../../assets/icons8-eliminar-64.png";
 
 function Navbar() {
   const [isMenuHide, setIsMenuHide] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -14,58 +13,57 @@ function Navbar() {
   };
 
   const handleCloseMenu = () => {
-    setIsMenuHide(!isMenuHide);
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 640);
-    };
-    // Add an event listener to the window to listen for resize events.
-    // Each time the window resizes, handleResize will be called.
-    window.addEventListener("resize", handleResize);
     setIsMenuHide(false);
-    // Cleanup function to remove the resize event listener when the component
-    // is unmounted, preventing memory leaks or unintended behavior.
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+  };
 
   return (
     <nav className="navbar">
-      
       <NavLink to="/" onClick={handleCloseMenu}>
         <img src="" alt="logo" />
       </NavLink>
 
-      {isMobile && (
-        <button id="menu-btn" onClick={handleClick}>
-          {isMenuHide ? (
-            <img src={cancelIcon} alt="menu btn" />
-          ) : (
-            <img src={burguerIcon} alt="menu btn" />
-          )}
-        </button>
-      )}
+      <label
+        htmlFor="menu-toggle"
+        className={`menu-btn ${isMenuHide ? "close-menu" : ""}`}
+        onClick={handleClick}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
-      {(isMenuHide || !isMobile) && (
-        <ul className="navbar-nav" id="menu">
-          <NavLink className="nav-item" to="/" onClick={handleCloseMenu}>
-            Home
-          </NavLink>
-          <NavLink className="nav-item" to="/projects">
-            Projects
-          </NavLink>
-          <NavLink className="nav-item" to="/about">
-            About
-          </NavLink>
-          <NavLink className="nav-item" to="/contact">
-            Contact
-          </NavLink>
-        </ul>
-      )}
+      <ul
+        className={`navbar-nav ${isMenuHide ? "menu-visible" : ""}`}
+        id="menu"
+      >
+        <div className="li-container">
+          <li>
+            <NavLink className="nav-item" to="/" onClick={handleCloseMenu}>
+              <h1>Home</h1>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-item" to="/projects">
+              <h1>Projects</h1>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-item" to="/portfolio">
+              <h1>3D Projects</h1>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-item" to="/about">
+              <h1>About</h1>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="nav-item" to="/contact">
+              <h1>Contact</h1>
+            </NavLink>
+          </li>
+        </div>
+      </ul>
     </nav>
   );
 }
